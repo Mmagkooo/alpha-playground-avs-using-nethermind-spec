@@ -30,4 +30,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     host = args.host
     port = args.port
+    print("hi soubhik")
     health_check(f"{host}:{port}")
