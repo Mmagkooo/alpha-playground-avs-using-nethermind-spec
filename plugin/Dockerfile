@@ -1,11 +1,11 @@
-FROM python:3.11
+# Use the latest foundry image
+FROM ghcr.io/foundry-rs/foundry:latest
 
-WORKDIR /code
+# Copy our source code into the container
+WORKDIR /app
 
-COPY ./requirements.txt /code/requirements.txt
+# Build and test the source code
+COPY ./app /app
+RUN forge build
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-
-COPY ./app /code/app
-
-ENTRYPOINT [ "python", "app/main.py" ]
+ENTRYPOINT [ "make" ]
