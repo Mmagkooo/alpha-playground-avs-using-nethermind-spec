@@ -1,10 +1,9 @@
-version: v0.1.0
-node_version: v3.0.0
-name: python-mock-server
+version: v0.0.1
+node_version: v0.0.1
+name: avs-playground
 upgrade: recommended
 # TODO: add hardware requirements
 plugin:
-  build_from: https://github.com/NethermindEth/mock-avs.git#main:plugin
+  build_from: https://github.com/Layr-Labs/alpha-playground-avs-using-nethermind-spec.git#main:plugin
 profiles:
   - name: option-returner
-  - name: health-checker
