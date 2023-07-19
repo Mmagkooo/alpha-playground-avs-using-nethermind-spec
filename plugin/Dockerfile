@@ -1,6 +1,8 @@
 # https://book.getfoundry.sh/tutorials/foundry-docker?highlight=docker#creating-a-build-and-test-image
 FROM ghcr.io/foundry-rs/foundry:latest
 
+RUN apk add make bash
+
 # Copy our source code into the container
 WORKDIR /app
 
