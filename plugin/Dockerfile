@@ -1,4 +1,4 @@
-# Use the latest foundry image
+# https://book.getfoundry.sh/tutorials/foundry-docker?highlight=docker#creating-a-build-and-test-image
 FROM ghcr.io/foundry-rs/foundry:latest
 
 # Copy our source code into the container
