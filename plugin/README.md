@@ -1,13 +1,8 @@
-# AVS Mock Plugin
+# AVS Registration Plugin
 
-The plugin receives a `host` and a `port` arguments. Makes a GET request to the `/eigen/node/health` endpoint of the AVS instance running at `http://<host>:<port>`. The plugin should run in the same docker network as the AVS instance and using the docker-compose service name for `host` is preferred.
+This plugin is a forge repo that is meant to be used to interact with the AVS contracts for registration, stake updates, etc.
 
-## Default values
-
-```
-host: "main-service"
-port: 8080
-```
+TODO: currently doesn't work when installing via nethermind-cli because the commands in the [Makefile](./app/Makefile) need to persist the contract deployment addresses in a file, but the nethermind-cli doesn't seem to give any option to mount a local volume when running the plugin.
 
 ## How to build the image
 
